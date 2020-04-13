@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "HelloWorld",
+    "name": "FootPlayer",
     "slug": "footplayer_mobile",
     "platforms": [
       "ios",
