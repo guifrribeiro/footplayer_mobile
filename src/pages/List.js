@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { SafeAreaView, Text, AsyncStorage } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, AsyncStorage } from 'react-native';
 
 import CourtList from '../components/CourtList';
 
@@ -20,7 +20,9 @@ export default function List() {
     <SafeAreaView style={styles.container}>
       {/* <Image style={styles.logo} source={logo} /> */}
 
-      <CourtList />
+      <ScrollView>
+        {sports.map(sport => <CourtList key={sport} sport={sport} />)}
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -30,10 +32,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 
-  logo: {
-    height: 32,
-    resizeMode: "contain",
-    alignSelf: 'center',
-    marginTop: 10,
-  },
+  // logo: {
+  //   height: 32,
+  //   resizeMode: "contain",
+  //   alignSelf: 'center',
+  //   marginTop: 10,
+  // },
 });
